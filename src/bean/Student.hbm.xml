@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="bean.Student" table="student">
+        <!-- 卡号 -->
+        <id name="id" column="id">
+            <generator class="increment"></generator>
+        </id>
+        <!-- 姓名 -->
+        <property name="userName" column="userName"></property>
+        <!-- 密码-->
+        <property name="password" column="password"></property>
+    </class>
+</hibernate-mapping>
