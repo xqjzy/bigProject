@@ -13,7 +13,7 @@
         <!-- 指定连接数据库所用的驱动 -->  
         <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
         <!-- 指定连接数据库的url，hibernate连接的数据库名 -->  
-        <property name="connection.url">jdbc:mysql://120.78.86.188/hibernate?useSSL=false</property>  
+        <property name="connection.url">jdbc:mysql://120.78.86.188/bigproject?useSSL=false</property>  
         <!-- 指定连接数据库的用户名 -->  
         <property name="connection.username">qiao</property>  
         <!-- 指定连接数据库的密码 -->  
@@ -39,5 +39,7 @@
         <property name="hibernate.format_sql">true</property>  
         <!-- 罗列所有的映射文件 -->  
         <mapping resource="bean/Student.hbm.xml"/>  
+        <mapping resource="bean/Users.hbm.xml"/>  
+        
     </session-factory>  
 </hibernate-configuration>

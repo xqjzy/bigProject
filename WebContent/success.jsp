@@ -5,6 +5,10 @@
 <title>登录</title>
 </head>
 <body>
+	<% String id = session.getId(); 
+		out.println(id);
+		out.print(session.getAttribute("hh"));
+	%>
 登录成功！
 </body>
 </html>

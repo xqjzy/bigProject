@@ -5,11 +5,16 @@
         "http://struts.apache.org/dtds/struts-2.5.dtd">
 
 <struts>
-	<package name="test" extends="struts-default">
-		<global-allowed-methods>login</global-allowed-methods>
-		<action name="login" class="myLoginAction" method="login">
+	<package name="test" extends="struts-default"><!-- 
+		<global-allowed-methods>register</global-allowed-methods> -->
+		<action name="register" class="register" method="register">
 			<result name="success">/success.jsp</result>
 			<result name="fail">/fail.jsp</result>
 		</action>
+		<action name="login" class="login" method="login">
+			<result name="success">/success.jsp</result>
+			<result name="fail">/fail.jsp</result>
+		</action>
+		
 	</package>
 </struts>

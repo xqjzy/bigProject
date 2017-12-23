@@ -4,14 +4,26 @@
     xsi:schemaLocation="http://www.springframework.org/schema/beans 
     http://www.springframework.org/schema/beans/spring-beans.xsd">
     
-    
-    <bean id="dao" class="dao.IndexDao" scope = "prototype"></bean>
-    
-	<bean id="mylogin" class="login.LoginByAccount" scope="prototype">
-		<property name="id" ref = "dao"></property>
+
+	<!-- UsersIDao接口实现类 -->
+	<bean id = "udao" class = "dao.UsersDao" scope = "prototype"></bean>
+	
+	<!-- IRegister接口实现类-->
+	<bean id = "regi" class = "service.Register" scope = "prototype">
+		<property name="uidao" ref = "udao"></property>
 	</bean>
-	<bean id="myLoginAction" class="action.LoginAction">
-		<property name="login" ref = "mylogin"></property>
+	<bean id = "register" class = "action.UserRegister" scope= "prototype">
+		<property name="iregister" ref = "regi"></property>
 	</bean>
- 
+	
+	
+	<!-- UsersIDao接口实现类 -->
+	<bean id = "udao1" class = "dao.UsersDao" scope = "prototype"></bean>
+	<bean id = "logi" class = "service.Login" scope = "prototype">
+		<property name="ui" ref = "udao1"></property>
+	</bean>
+	<bean id = "login" class = "action.UserLogin" scope = "prototype">
+		<property name="ilogin" ref = "logi"></property>
+	</bean>
+	
 </beans>
